@@ -2,8 +2,6 @@ import { Component, ViewChild } from '@angular/core';
 
 import { Platform, MenuController, Nav } from 'ionic-angular';
 
-import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
-import { ListPage } from '../pages/list/list';
 import { SelectClub } from '../pages/SelectClub/SelectClub';
 import { ClubDetails } from '../pages/ClubDetails/ClubDetails';
 
@@ -32,7 +30,6 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
-      { title: 'Hello Ionic', component: HelloIonicPage },
       { title: 'Select Club', component: SelectClub },
     ];
   }
