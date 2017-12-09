@@ -41,5 +41,6 @@ export class ClubDetails {
 
     selectClubButton.disabled = true;
     clubStadiumImage.classList.add('activated');
+    sessionStorage.setItem('users-club', JSON.stringify(this.selectedClub));
   }
 }
