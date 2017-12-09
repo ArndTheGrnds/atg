@@ -12,7 +12,7 @@
 <ion-content>
   <img class="club-stadium" src="{{selectedClub.stadiumImage}}" alt="Club Stadium">
   <ion-grid>
-    <ion-row>
+    <ion-row class="club-info">
       <ion-col col-2>
         <img src="{{selectedClub.badge}}" alt="Club Badge">
       </ion-col>
@@ -24,7 +24,7 @@
         <button type="button" class="select-club-btn" (click)='selectClub($event)'>Accept club</button>
       </ion-col>
     </ion-row>
-    <ion-row class="club-info">
+    <ion-row >
       <ion-col class="item-ios" col-6>
         <p class="address">
           <b>Address</b><br/>

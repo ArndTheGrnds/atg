@@ -29,7 +29,12 @@ clubdetails {
     color: black;
   }
   .club-info {
-    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 0.55px solid #c8c7cc;
+    .item-ios {
+      background: transparent;
+    }
+
   }
   .address {
     padding-right: 20px;
