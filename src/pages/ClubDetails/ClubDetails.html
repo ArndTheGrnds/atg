@@ -10,23 +10,24 @@
 </ion-header>
 
 <ion-content>
-  <img class="club-stadium" src="assets/imgs/england/premierLeague/{{selectedClub.stadiumImage}}" alt="Club Stadium">
+  <img class="club-stadium" src="{{selectedClub.stadiumImage}}" alt="Club Stadium">
   <ion-grid>
     <ion-row>
       <ion-col col-2>
-        <img src="assets/imgs/england/premierLeague/{{selectedClub.badge}}" alt="Club Badge">
+        <img src="{{selectedClub.badge}}" alt="Club Badge">
       </ion-col>
-      <ion-col col-6 class="item-ios">
-        <h1>{{selectedClub.name}}</h1>
+      <ion-col col-5 class="item-ios">
+        <h1 id="club">{{selectedClub.name}}</h1>
         <p>{{selectedClub.stadium}}</p>
       </ion-col>
-      <ion-col col-4>
+      <ion-col col-5>
         <button type="button" class="select-club-btn" (click)='selectClub($event)'>Accept club</button>
       </ion-col>
     </ion-row>
-    <ion-row>
+    <ion-row class="club-info">
       <ion-col class="item-ios" col-6>
-        <p>
+        <p class="address">
+          <b>Address</b><br/>
           {{selectedClub.address}}
         </p>
       </ion-col>

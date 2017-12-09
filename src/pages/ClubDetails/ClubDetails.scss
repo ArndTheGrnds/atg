@@ -1,4 +1,13 @@
 clubdetails {
+  .toolbar-background {
+    background: linear-gradient(to bottom, #207533 0%, #289642 100%);
+  }
+  .toolbar-title-ios {
+    color: white;
+  }
+  .item-ios[col-6] {
+    padding-left: 5px;;
+  }
   .select-club-btn {
     border-radius: 5px;
     background-color: #299843;
@@ -13,10 +22,16 @@ clubdetails {
     filter: grayscale(1);
     transition: filter .5s ease-in-out;
     &.activated {
-        filter: none;
+      filter: none;
     }
   }
   p b {
-      color: black;
+    color: black;
+  }
+  .club-info {
+    margin-top: 1rem;
+  }
+  .address {
+    padding-right: 20px;
   }
 }

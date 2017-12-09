@@ -8,13 +8,62 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let club of premierLeagueTeams" (click)="itemTapped($event, club)">
-      <ion-thumbnail item-start>
-        <img src="assets/imgs/england/premierLeague/{{club.badge}}">
-      </ion-thumbnail>
-      <h2>{{club.name}}</h2>
-      <p>{{club.stadium}}</p>
-    </ion-item>
-  </ion-list>
+  <div padding>
+    <ion-segment [(ngModel)]="league">
+      <ion-segment-button value="Premier League">
+        Premier League
+      </ion-segment-button>
+      <ion-segment-button value="Championship">
+        Championship
+      </ion-segment-button>
+      <ion-segment-button value="League One">
+        League One
+      </ion-segment-button>
+      <ion-segment-button value="League Two">
+        League Two
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  
+  <div [ngSwitch]="league">
+    <ion-list *ngSwitchCase="'Premier League'">
+      <ion-item *ngFor="let club of premierLeagueTeams" (click)="itemTapped($event, club)">
+        <ion-thumbnail item-start>
+          <img src="{{club.badge}}">
+        </ion-thumbnail>
+        <h2>{{club.name}}</h2>
+        <p>{{club.stadium}}</p>
+      </ion-item>
+    </ion-list>
+  
+    <ion-list *ngSwitchCase="'Championship'">
+      <ion-item *ngFor="let club of championshipTeams" (click)="itemTapped($event, club)">
+        <ion-thumbnail item-start>
+          <img src="{{club.badge}}">
+        </ion-thumbnail>
+        <h2>{{club.name}}</h2>
+        <p>{{club.stadium}}</p>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'League One'">
+      <ion-item *ngFor="let club of leagueOneTeams" (click)="itemTapped($event, club)">
+        <ion-thumbnail item-start>
+          <img src="{{club.badge}}">
+        </ion-thumbnail>
+        <h2>{{club.name}}</h2>
+        <p>{{club.stadium}}</p>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'League Two'">
+      <ion-item *ngFor="let club of leagueTwoTeams" (click)="itemTapped($event, club)">
+        <ion-thumbnail item-start>
+          <img src="{{club.badge}}">
+        </ion-thumbnail>
+        <h2>{{club.name}}</h2>
+        <p>{{club.stadium}}</p>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>
