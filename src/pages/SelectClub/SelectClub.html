@@ -7,24 +7,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <div padding>
-    <ion-segment [(ngModel)]="league">
-      <ion-segment-button value="Premier League">
-        Premier League
-      </ion-segment-button>
-      <ion-segment-button value="Championship">
-        Championship
-      </ion-segment-button>
-      <ion-segment-button value="League One">
-        League One
-      </ion-segment-button>
-      <ion-segment-button value="League Two">
-        League Two
-      </ion-segment-button>
-    </ion-segment>
-  </div>
-  
+<ion-content>  
   <div [ngSwitch]="league">
     <ion-list *ngSwitchCase="'Premier League'">
       <ion-item *ngFor="let club of premierLeagueTeams" (click)="itemTapped($event, club)">
@@ -67,3 +50,20 @@
     </ion-list>
   </div>
 </ion-content>
+
+<ion-footer>
+    <ion-segment padding [(ngModel)]="league">
+      <ion-segment-button value="Premier League">
+        Premier League
+      </ion-segment-button>
+      <ion-segment-button value="Championship">
+        Championship
+      </ion-segment-button>
+      <ion-segment-button value="League One">
+        League One
+      </ion-segment-button>
+      <ion-segment-button value="League Two">
+        League Two
+      </ion-segment-button>
+    </ion-segment>
+</ion-footer>
