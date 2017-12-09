@@ -1,3 +1,17 @@
-page-list {
-
+selectclub {
+    .toolbar-background {
+      background: linear-gradient(to bottom, #207533 0%,#289642 100%);
+    }
+    .toolbar-title-ios {
+        color: white;
+    }
+    .item-ios ion-thumbnail[item-start] {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .item-ios ion-thumbnail img {
+      width: auto;
+      height: 56px;
+    }
 }

@@ -1,15 +1,9 @@
-import { Component } from '@angular/core';
-
-import { NavController, NavParams } from 'ionic-angular';
-
-import { ClubDetails } from '../ClubDetails/ClubDetails';
-
 const clubList = [{
     league: {
         id: 'Premier League',
         country: 'England',
         teams: [{
-            name: 'Arsenal',
+            club: 'Arsenal',
             stadium: 'Emirates Stadium',
             capacity: 60361,
             badge: 'arsenal.png',
@@ -20,10 +14,10 @@ const clubList = [{
             hashTag: '#Arsenal',
             knownAs: 'The Gunners'
         }, {
-            name: 'Bournemouth',
+            club: 'Bournemouth',
             stadium: 'Vitality Stadium',
             capacity: 11464,
-            badge: 'bournmouth.png',
+            badge: 'afcb.png',
             sponsor: 'vitality.png',
             rival: 'Southampton',
             founded: 1890,
@@ -31,10 +25,10 @@ const clubList = [{
             hashTag: '#AFCB',
             knownAs: 'The Cherries'
         }, {
-            name: 'Brighton and Hove Albion',
+            club: 'Brighton and Hove Albion',
             stadium: 'Amex Stadium',
             capacity: 22374,
-            badge: 'brighton.png',
+            badge: 'bhafc.png',
             sponsor: 'amex.png',
             rival: 'Crystal Palace',
             founded: 1901,
@@ -42,10 +36,10 @@ const clubList = [{
             hashTag: '#BHAFC',
             knownAs: 'The Seagulls'
         }, {
-            name: 'Burnley',
+            club: 'Burnley',
             stadium: 'Turf Moor',
             capacity: 22546,
-            badge: 'burnley.png',
+            badge: 'bfc.png',
             sponsor: 'BLANK.png',
             rival: 'Blackburn Rovers',
             founded: 1882,
@@ -53,10 +47,10 @@ const clubList = [{
             hashTag: '#BFC',
             knownAs: 'The Clarets'
         }, {
-            name: 'Chelsea',
+            club: 'Chelsea',
             stadium: 'Stamford Bridge',
             capacity: 41837,
-            badge: 'chelsea.png',
+            badge: 'cfc.png',
             sponsor: 'BLANK.png',
             rival: 'Fulham',
             founded: 1905,
@@ -64,10 +58,10 @@ const clubList = [{
             hashTag: '#CFC',
             knownAs: 'The Blues'
         }, {
-            name: 'Crystal Palace',
+            club: 'Crystal Palace',
             stadium: 'Selhurst Park',
             capacity: 26309,
-            badge: 'crystalPalace.png',
+            badge: 'cpfc.png',
             sponsor: 'BLANK.png',
             rival: 'Charlton Athletic',
             founded: 1905,
@@ -75,10 +69,10 @@ const clubList = [{
             hashTag: '#CPFC',
             knownAs: 'The Eagles'
         }, {
-            name: 'Everton',
+            club: 'Everton',
             stadium: 'Goodison Park',
             capacity: 40157,
-            badge: 'everton.png',
+            badge: 'efc.png',
             sponsor: 'BLANK.png',
             rival: 'Liverpool',
             founded: 1878,
@@ -86,10 +80,10 @@ const clubList = [{
             hashTag: '#EFC',
             knownAs: 'The Toffees'
         }, {
-            name: 'Huddersfield Town',
+            club: 'Huddersfield Town',
             stadium: 'The John Smith\'s Stadium',
             capacity: 24500,
-            badge: 'huddersfield.png',
+            badge: 'htafc.png',
             sponsor: 'johnsmith.png',
             rival: 'Leeds United',
             founded: 1908,
@@ -97,10 +91,10 @@ const clubList = [{
             hashTag: '#HTAFC',
             knownAs: 'The Terriers'
         }, {
-            name: 'Leicester City',
+            club: 'Leicester City',
             stadium: 'King Power Stadium',
             capacity: 32262,
-            badge: 'leicester.png',
+            badge: 'lcfc.png',
             sponsor: 'kingPower.png',
             rival: 'Derby County',
             founded: 1884,
@@ -108,10 +102,10 @@ const clubList = [{
             hashTag: '#LCFC',
             knownAs: 'The Foxes'
         }, {
-            name: 'Liverpool',
+            club: 'Liverpool',
             stadium: 'Anfield',
             capacity: 45522,
-            badge: 'liverpool.png',
+            badge: 'lfc.png',
             sponsor: 'BLANK.png',
             rival: 'Everton',
             founded: 1892,
@@ -119,10 +113,10 @@ const clubList = [{
             hashTag: '#LFC',
             knownAs: 'The Reds'
         }, {
-            name: 'Manchester City',
+            club: 'Manchester City',
             stadium: 'Etihad Stadium',
             capacity: 47805,
-            badge: 'manchesterCity.png',
+            badge: 'mcfc.png',
             sponsor: 'etihad.png',
             rival: 'Manchester United',
             founded: 1880,
@@ -130,10 +124,10 @@ const clubList = [{
             hashTag: '#MCFC',
             knownAs: 'The Citizens'
         }, {
-            name: 'Manchester United',
+            club: 'Manchester United',
             stadium: 'Old Trafford',
             capacity: 75811,
-            badge: 'manchesterUnited.png',
+            badge: 'mufc.png',
             sponsor: 'BLANK.png',
             rival: 'Manchester City',
             founded: 1878,
@@ -141,10 +135,10 @@ const clubList = [{
             hashTag: '#MUFC',
             knownAs: 'The Red Devils'
         }, {
-            name: 'Newcastle United',
+            club: 'Newcastle United',
             stadium: 'St James\' Park',
             capacity: 52387,
-            badge: 'newcastle.png',
+            badge: 'nufc.png',
             sponsor: 'BLANK.png',
             rival: 'Sunderland',
             founded: 1892,
@@ -152,10 +146,10 @@ const clubList = [{
             hashTag: '#NUFC',
             knownAs: 'The Magpies'
         }, {
-            name: 'Southampton',
+            club: 'Southampton',
             stadium: 'St Mary\'s Stadium',
             capacity: 32689,
-            badge: 'southampton.png',
+            badge: 'saintsfc.png',
             sponsor: 'BLANK.png',
             rival: 'Portsmouth',
             founded: 1885,
@@ -163,10 +157,10 @@ const clubList = [{
             hashTag: '#SaintsFC',
             knownAs: 'The Saints'
         }, {
-            name: 'Stoke City',
+            club: 'Stoke City',
             stadium: 'Britannia Stadium',
             capacity: 27598,
-            badge: 'stoke.png',
+            badge: 'scfc.png',
             sponsor: 'britannia.png',
             rival: 'Port Vale',
             founded: 1863,
@@ -174,10 +168,10 @@ const clubList = [{
             hashTag: '#SCFC',
             knownAs: 'The Potters'
         }, {
-            name: 'Swansea City',
+            club: 'Swansea City',
             stadium: 'Liberty Stadium',
             capacity: 20532,
-            badge: 'swansea.png',
+            badge: 'swans.png',
             sponsor: 'liberty.png',
             rival: 'Cardiff City',
             founded: 1912,
@@ -185,10 +179,10 @@ const clubList = [{
             hashTag: '#Swans',
             knownAs: 'The Swans'
         }, {
-            name: 'Tottenham Hotspur',
+            club: 'Tottenham Hotspur',
             stadium: 'White Hart Lane',
             capacity: 36230,
-            badge: 'tottenham.png',
+            badge: 'coys.png',
             sponsor: 'BLANK.png',
             rival: 'Arsenal',
             founded: 1882,
@@ -196,10 +190,10 @@ const clubList = [{
             hashTag: '#COYS',
             knownAs: 'Spurs'
         }, {
-            name: 'Watford',
+            club: 'Watford',
             stadium: 'Vicarage Road',
             capacity: 17477,
-            badge: 'watford.png',
+            badge: 'watfordfc.png',
             sponsor: 'BLANK.png',
             rival: 'Luton Town',
             founded: 1881,
@@ -207,7 +201,7 @@ const clubList = [{
             hashTag: '#WatfordFC',
             knownAs: 'The Hornets'
         }, {
-            name: 'West Bromwich Albion',
+            club: 'West Bromwich Albion',
             stadium: 'The Hawthorns',
             capacity: 26272,
             badge: 'wba.png',
@@ -218,10 +212,10 @@ const clubList = [{
             hashTag: '#WBA',
             knownAs: 'The Baggies'
         }, {
-            name: 'West Ham United',
+            club: 'West Ham United',
             stadium: 'Boleyn Ground',
             capacity: 35016,
-            badge: 'westHam.png',
+            badge: 'whufc.png',
             sponsor: 'BLANK.png',
             rival: 'Millwall',
             founded: 1895,
@@ -231,26 +225,3 @@ const clubList = [{
         }]
     }
 }]
-
-@Component({
-  selector: 'selectclub',
-  templateUrl: 'SelectClub.html'
-})
-export class SelectClub {
-  premierLeagueTeams = [];
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    clubList.forEach(i => {
-      if (i.league.id === 'Premier League') {
-        i.league.teams.forEach(club => {
-          this.premierLeagueTeams.push(club);
-        });
-      }
-    });
-  }
-
-  itemTapped(event, club) {
-    this.navCtrl.push(ClubDetails, {
-      name: club
-    });
-  }
-}

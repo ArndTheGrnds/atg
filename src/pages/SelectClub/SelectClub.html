@@ -9,8 +9,12 @@
 
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="let club of clubList" (click)="itemTapped($event, club)">
-      {{club.league.country}}
-    </button>
+    <ion-item *ngFor="let club of premierLeagueTeams" (click)="itemTapped($event, club)">
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/england/premierLeague/{{club.badge}}">
+      </ion-thumbnail>
+      <h2>{{club.name}}</h2>
+      <p>{{club.stadium}}</p>
+    </ion-item>
   </ion-list>
 </ion-content>
