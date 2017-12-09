@@ -1,3 +1,22 @@
-ClubDetails {
-
+clubdetails {
+  .select-club-btn {
+    border-radius: 5px;
+    background-color: #299843;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    border: 0;
+    height: 30px;
+  }
+  .club-stadium {
+    filter: grayscale(1);
+    transition: filter .5s ease-in-out;
+    &.activated {
+        filter: none;
+    }
+  }
+  p b {
+      color: black;
+  }
 }
