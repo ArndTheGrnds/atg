@@ -7,11 +7,14 @@ selectclub {
   }
   .segment-ios {
     .segment-button {
-      font-size: 1.05rem;
+      font-size: 1.1rem;
     }
   }
   .bar-button-menutoggle-ios {
     display: none !important;
+  }
+  [padding] {
+    padding: 8px;
   }
   ion-footer {
     border-top: 0.55px solid #c8c7cc;
