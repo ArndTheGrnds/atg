@@ -4,6 +4,7 @@ import { Platform, MenuController, Nav } from 'ionic-angular';
 
 import { SelectClub } from '../pages/SelectClub/SelectClub';
 import { ClubDetails } from '../pages/ClubDetails/ClubDetails';
+import { SignUpForm } from '../pages/SignUpForm/SignUpForm';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -31,6 +32,8 @@ export class MyApp {
     // set our app's pages
     this.pages = [
       { title: 'Select Club', component: SelectClub },
+      { title: 'Club Details', component: ClubDetails },
+      { title: 'Sign Up Form', component: SignUpForm },
     ];
   }
 
@@ -39,7 +42,7 @@ export class MyApp {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
-      this.splashScreen.hide();
+      this.splashScreen.show();
     });
   }
 

@@ -5,6 +5,7 @@ import { MyApp } from './app.component';
 
 import { SelectClub } from '../pages/SelectClub/SelectClub';
 import { ClubDetails } from '../pages/ClubDetails/ClubDetails';
+import { SignUpForm } from '../pages/SignUpForm/SignUpForm';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -13,7 +14,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     SelectClub,
-    ClubDetails
+    ClubDetails,
+    SignUpForm
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     SelectClub,
-    ClubDetails
+    ClubDetails,
+    SignUpForm
   ],
   providers: [
     StatusBar,

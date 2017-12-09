@@ -8,6 +8,8 @@ import {
   AlertController
 } from 'ionic-angular';
 
+import { SignUpForm } from '../SignUpForm/SignUpForm';
+
 @Component({
   selector: 'ClubDetails',
   templateUrl: 'ClubDetails.html'
@@ -29,7 +31,7 @@ export class ClubDetails {
         buttons: [{
           text: 'Signup!',
           handler: data => {
-            console.log('Go to sign up');
+            this.navCtrl.push(SignUpForm);
           }
         }]
       });
