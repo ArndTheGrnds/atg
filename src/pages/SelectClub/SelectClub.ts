@@ -241,8 +241,8 @@ export class SelectClub {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     clubList.forEach(i => {
       if (i.league.id === 'Premier League') {
-        i.league.teams.forEach(club => {
-          this.premierLeagueTeams.push(club);
+        i.league.teams.forEach(team => {
+          this.premierLeagueTeams.push(team);
         });
       }
     });
@@ -250,7 +250,7 @@ export class SelectClub {
 
   itemTapped(event, club) {
     this.navCtrl.push(ClubDetails, {
-      name: club
+      club: club
     });
   }
 }
