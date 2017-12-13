@@ -4,7 +4,8 @@ import {
 
 import {
   NavController,
-  NavParams
+  NavParams,
+  MenuController
 } from 'ionic-angular';
 
 import {
@@ -1247,7 +1248,7 @@ export class SelectClub {
   leagueOneTeams = [];
   leagueTwoTeams = [];
   league: string = "Premier League";
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController) {
     clubList.forEach(i => {
       if (i.league.id === 'Premier League') {
         i.league.teams.forEach(team => {
@@ -1269,9 +1270,9 @@ export class SelectClub {
           this.leagueTwoTeams.push(team);
         });
       }
+      this.menuCtrl.swipeEnable(false);
     });
   }
-
   itemTapped(event, club) {
     this.navCtrl.push(ClubDetails, {
       club: club

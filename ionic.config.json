@@ -1,6 +1,6 @@
 {
   "name": "aroundTheGrounds",
-  "app_id": "",
+  "app_id": "ed06fadf",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

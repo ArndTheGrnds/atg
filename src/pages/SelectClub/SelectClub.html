@@ -7,7 +7,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>  
+<ion-content no-bounce>
   <div [ngSwitch]="league">
     <ion-list *ngSwitchCase="'Premier League'">
       <ion-item *ngFor="let club of premierLeagueTeams" (click)="itemTapped($event, club)">
@@ -18,7 +18,7 @@
         <p>{{club.stadium}}</p>
       </ion-item>
     </ion-list>
-  
+
     <ion-list *ngSwitchCase="'Championship'">
       <ion-item *ngFor="let club of championshipTeams" (click)="itemTapped($event, club)">
         <ion-thumbnail item-start>

@@ -5,7 +5,8 @@ import {
 import {
   NavController,
   NavParams,
-  AlertController
+  AlertController,
+  MenuController
 } from 'ionic-angular';
 
 @Component({
@@ -13,8 +14,8 @@ import {
   templateUrl: 'SignUpForm.html'
 })
 export class SignUpForm {
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
-    
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, public menuCtrl: MenuController) {
+    this.menuCtrl.swipeEnable(false);
   }
   launchLogin(social) {
     let alert = this.alertCtrl.create({
@@ -27,5 +28,6 @@ export class SignUpForm {
       }]
     });
     alert.present();
+    // this.navCtrl.push();
   }
 }

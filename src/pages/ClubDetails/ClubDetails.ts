@@ -5,7 +5,8 @@ import {
 import {
   NavController,
   NavParams,
-  AlertController
+  AlertController,
+  MenuController
 } from 'ionic-angular';
 
 import { SignUpForm } from '../SignUpForm/SignUpForm';
@@ -16,9 +17,10 @@ import { SignUpForm } from '../SignUpForm/SignUpForm';
 })
 export class ClubDetails {
   selectedClub: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, public menuCtrl: MenuController) {
     // If we navigated to this page, we will have a club available as a nav param
     this.selectedClub = navParams.get('club');
+    this.menuCtrl.swipeEnable(false);
   }
   selectClub($event) {
     const clubStadiumImage = document.querySelector('.club-stadium');
@@ -36,7 +38,6 @@ export class ClubDetails {
         }]
       });
       alert.present();
-
     }, 800);
 
     selectClubButton.disabled = true;
